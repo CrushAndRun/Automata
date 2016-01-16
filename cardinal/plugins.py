@@ -38,7 +38,7 @@ class PluginManager(object):
     plugins = None
     """List of loaded plugins"""
 
-    command_regex = re.compile(r'\.(([A-Za-z0-9_-]+)\s?.*$)')
+    command_regex = re.compile(r'\*(([A-Za-z0-9_-]+)\s?.*$)')
     """Regex for matching standard commands.
 
     This will check for anything beginning with a period (.) followed by any
