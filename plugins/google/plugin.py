@@ -2,7 +2,7 @@ from cardinal.decorators import command, help
 
 from google import search
 
-MAX_RESULTS = 3
+MAX_RESULTS = 2
 
 
 class GoogleSearch(object):
