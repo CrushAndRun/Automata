@@ -117,7 +117,7 @@ class HelpPlugin(object):
             channel,
             "I am a Python-based Cardinal IRC bot. My owners are: %s. You can "
             "find out more about me on my Github page: "
-            "http://johnmaguire.github.io/Cardinal (Try .help for commands.)" %
+            "https://git.io/v2LDl (Try .help for commands.)" %
             owners.encode('utf-8')
         )
         cardinal.sendMsg(
