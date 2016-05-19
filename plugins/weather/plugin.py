@@ -21,7 +21,7 @@ class WeatherPlugin(object):
         except urllib2.URLError:
             cardinal.sendMsg(channel, "Error accessing Yahoo! Where API. (URLError Exception occurred (#1).)")
         except urllib2.HTTPError:
-            cardinal.sendMsg(channel, "Error accessing Yahoo! Where API. (HTTPError Exception occurred.")
+            cardinal.sendMsg(channel, "Error accessing Yahoo! Where API. (HTTPError Exception occurred (#1).)")
             return
 
         try:
@@ -37,7 +37,7 @@ class WeatherPlugin(object):
             cardinal.sendMsg(channel, "Error accessing Yahoo! Weather API. (URLError Exception occurred (#2).)")
             return
         except urllib2.HTTPError:
-            cardinal.sendMsg(channel, "Error accessing Yahoo! Weather API. (URLError Exception occurred (#3).)")
+            cardinal.sendMsg(channel, "Error accessing Yahoo! Weather API. (HTTPError Exception occurred (#2).)")
             return
 
         try:
