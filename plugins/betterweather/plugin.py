@@ -44,7 +44,7 @@ def check_status(status):
     elif status == 'OK':
         return None
 
-def find_location(channel, location):
+def find_location(channel, location, cardinal):
     params = {"address": location, "key": dev_key}
     if bias:
         params['region'] = bias
@@ -77,7 +77,7 @@ class WeatherPlugin(object):
             return
 
         try:
-            location_data = find_location(channel, location)
+            location_data = find_location(channel, location, cardinal)
             if not location_data:
                 return
         except IndexError:
