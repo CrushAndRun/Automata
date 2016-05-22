@@ -20,7 +20,7 @@ dev_key = ""
 # Add your Wunderground API key here
 wunder_key = ""
 
-# Whether you want output in F and MPH, in °C and km/h, or both
+# Whether you want output in F and MPH, in C and km/h, or both
 # possible values: "f", "c", "both"
 units = "f"
 
@@ -126,18 +126,18 @@ class WeatherPlugin(object):
                              "Low: {tomorrow_low_f}F.".format(**weather_data))
             return
         elif units == "c":
-            cardinal.sendMsg(channel, "{place} - \x02Current:\x02 {conditions}, {temp_c}°C, Humidity: {humidity}, "
+            cardinal.sendMsg(channel, "{place} - \x02Current:\x02 {conditions}, {temp_c}C, Humidity: {humidity}, "
                              "Wind: {wind_kph}km/h from {wind_direction}, \x02Today:\x02 {today_conditions}, "
-                             "High: {today_high_c}°C, Low: {today_low_c}°C. "
-                             "\x02Tomorrow:\x02 {tomorrow_conditions}, High: {tomorrow_high_c}°C, "
-                             "Low: {tomorrow_low_c}°C.".format(**weather_data))
+                             "High: {today_high_c}C, Low: {today_low_c}C. "
+                             "\x02Tomorrow:\x02 {tomorrow_conditions}, High: {tomorrow_high_c}C, "
+                             "Low: {tomorrow_low_c}C.".format(**weather_data))
             return
         elif units == "both":
-            cardinal.sendMsg(channel, "{place} - \x02Current:\x02 {conditions}, {temp_f}F / {temp_c}°C, Humidity: {humidity}, "
+            cardinal.sendMsg(channel, "{place} - \x02Current:\x02 {conditions}, {temp_f}F / {temp_c}C, Humidity: {humidity}, "
                              "Wind: {wind_mph}MPH / {wind_kph}km/h from {wind_direction}, \x02Today:\x02 {today_conditions}, "
-                             "High: {today_high_f}F / {today_high_c}°C, Low: {today_low_f}F / {today_low_c}°C. "
-                             "\x02Tomorrow:\x02 {tomorrow_conditions}, High: {tomorrow_high_f}F / {tomorrow_high_c}°C, "
-                             "Low: {tomorrow_low_f}F / {tomorrow_low_c}°C.".format(**weather_data))
+                             "High: {today_high_f}F / {today_high_c}C, Low: {today_low_f}F / {today_low_c}C. "
+                             "\x02Tomorrow:\x02 {tomorrow_conditions}, High: {tomorrow_high_f}F / {tomorrow_high_c}C, "
+                             "Low: {tomorrow_low_f}F / {tomorrow_low_c}C.".format(**weather_data))
             return
         else:
             cardinal.sendMsg(channel, "An error occurred: \x02An invalid unit discriminator has been set in the plugin file!\x02")
