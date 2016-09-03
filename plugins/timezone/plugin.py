@@ -45,7 +45,7 @@ class TimezonePlugin(object):
         cardinal.sendMsg(channel, now.strftime(TIME_FORMAT))
 
     get_time.commands = ['time']
-    get_time.help = ['Returns the current time in a given time zone or GMT offset. Syntax: time <GMT offset or timzone>']
+    get_time.help = ['Returns the current time in a given time zone or GMT offset. Offsets: https://www.timeanddate.com/time/zones/ - Syntax: time <GMT offset or timzone>']
 
 def setup():
     return TimezonePlugin()
